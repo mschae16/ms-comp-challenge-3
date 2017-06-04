@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Static Comp 3</title>
+  </head>
+  <body>
+    <aside>
+      <div class="profile">
+        <button class="profile-pic"></button>
+        <h3 class="profile-name">Margo Schaedel <span class="profile-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span></h3>
+      </div>
+      <hr>
+      <div class="main">
+        <h4>Main</h4>
+        <ul>
+          <li><i class="fa fa-home" aria-hidden="true"></i>Home</li>
+          <li><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</li>
+          <li><i class="fa fa-file-text" aria-hidden="true"></i>Resumes</li>
+          <li><i class="fa fa-tasks" aria-hidden="true"></i>Tasks</li>
+          <li><i class="fa fa-calendar-o" aria-hidden="true"></i>Calendar</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="admin">
+        <h4>Admin</h4>
+        <ul>
+          <li><i class="fa fa-users" aria-hidden="true"></i>Users</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Locations</li>
+          <li><i class="fa fa-sitemap" aria-hidden="true"></i>Workflows</li>
+          <li><i class="fa fa-newspaper-o" aria-hidden="true"></i>Job Boards</li>
+          <li><i class="fa fa-connectdevelop" aria-hidden="true"></i>Social</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="categories">
+        <h4>Categories</h4>
+        <div class="checkboxes">
+          <label class="checkbox">
+            <input type="checkbox" id="admin-chkbox" checked>
+            administrative
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="design-chkbox">
+            design
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="executive-chkbox">
+            executive
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="human-resrcs-chkbox">
+            human resources
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="header-content">
+        <nav class="top-nav">
+          <button class="menu-btn">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <div class="search-bar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" class="search-input" placeholder="Search for a job, task, or resume">
+          </div>
+          <button class="add-user-btn">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+          </button>
+          <button class="calendar-btn">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </button>
+          <button class="grid-btn">
+            <i class="fa fa-th" aria-hidden="true"></i>
+          </button>
+        </nav>
+
+        <article>
+          <div class="header-title">
+            <h1>Customer Service Representative</h1>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA &#8226 <span class="preview">Preview this post</span></p>
+          </div>
+          <div class="header-btns">
+            <button class="open-btn">
+              <i class="fa fa-circle" aria-hidden="true"></i>Open
+            </button>
+            <button>
+              <i class="fa fa-bookmark" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+
+        <nav class="second-nav">
+          <a href="#" class="tab-nav tab-active">Summary</a>
+          <a href="#" class="tab-nav">Applicants</a>
+          <a href="#" class="tab-nav">Job Board</a>
+          <a href="#" class="tab-nav">Interviews</a>
+          <a href="#" class="tab-nav">Activity</a>
+          <a href="#" class="tab-nav">Broadcast</a>
+          <a href="#" class="tab-nav">Notifications</a>
+        </nav>
+      </header>
+
+      <section class="main-content">
+        <section class="graphs">
+          <div class="circle-chart">
+            <div class="three-circles">
+              <div class="circle circle-applicants">
+                <div class="circle-data">
+                  <p class="circle-count">3,154</p>
+                  <p class="circle-category">Applicants</p>
+                </div>
+              </div>
+              <div class="circle circle-interviews">
+                <div class="circle-data">
+                  <p class="circle-count">1,546</p>
+                  <p class="circle-category">Interviews</p>
+                </div>
+              </div>
+              <div class="circle circle-forwards">
+                <div class="circle-data">
+                  <p class="circle-count">912</p>
+                  <p class="circle-category">Forwards</p>
+                </div>
+              </div>
+            </div>
+            <div class="total-views-btn">
+              <button type="button" class="totals-btn"><span class="totals">Totals</span> &#8226 Out of 5,231 views</button>
+            </div>
+          </div>
+          <div class="bar-graph">
+            <div class="bar-graph-img"></div>
+            <button type="button" class="applicants-btn">Applicants/Day</button>
+          </div>
+        </section>
+        <div class="divider">
+          <hr class="divider-line">
+          <button type="button" class="up-arrow-btn"><i class="fa fa-caret-up" aria-hidden="true"></i></button>
+          <hr class="divider-line">
+        </div>
+        <section class="job-info">
+          <table class="job-info-table">
+            <tr class="row table-header">
+              <th class="table-category">Job Description</th>
+              <th><button><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button></th>
+            </tr>
+            <tr class="row row-one">
+              <td class="table-category">Position Title</td>
+              <td>Customer Service Representative</td>
+            </tr>
+            <tr class="row row-two">
+              <td class="table-category">Location</td>
+              <td>San Francisco, CA</td>
+            </tr>
+            <tr class="row row-three">
+              <td class="table-category">Employment Type</td>
+              <td>Full-time</td>
+            </tr>
+            <tr class="row row-four">
+              <td class="table-category">Experience</td>
+              <td>Mid-level</td>
+            </tr>
+            <tr class="row row-five">
+              <td>Status</td>
+              <td>Open</td>
+            </tr>
+            <tr class="row row-six">
+              <td>Description</td>
+              <td>The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle, helping the business reduce customer service wait times while doing a back handspring and eating a ham sandwich.</td>
+            </tr>
+            <tr class="row row-seven">
+              <td>Hiring Lead</td>
+              <td><img src="" alt="">Tina Fey</td>
+            </tr>
+            <tr class="row row-eight">
+              <td>Approved Salary</td>
+              <td>$1,000,000</td>
+            </tr>
+          </table>
+          <aside class="social-content">
+            <div class="social-btns">
+              <button type="button" class="facebook-btn"><i class="fa fa-facebook" aria-hidden="true"></i>Post to Facebook</button>
+              <button type="button" class="twitter-btn"><i class="fa fa-twitter" aria-hidden="true"></i>Tweet this Job</button>
+              <button type="button" class="linkedin-btn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>Post to Linkedin</button>
+            </div>
+            <div class="job-link">
+              <div>
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <h2>Link to this Job</h2>
+              </div>
+              <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
+              <div>
+                <input type="text" value="http://thisjobhasawebsitehere.com" />
+                <button type="button" class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="btn-widget">
+              <div>
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <h2>Use the Button Widget</h2>
+              </div>
+              <p>This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+              <div>
+                <input type="text" value="<script type='text/javascript' src='script.js'></script>" />
+                <button type="button" class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="upload-resume">
+              <div>
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <h2>Upload Resumes by Email</h2>
+              </div>
+              <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
+              <a href="#">tinafey@gmail.com</a>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+  </body>
+</html>

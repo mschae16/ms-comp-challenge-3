@@ -1,0 +1,417 @@
+/*BASE STYLES*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: #999EA9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body, ul, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+/*ASIDE STYLES*/
+
+aside {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 200px;
+  background-color: #354052;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.profile-pic {
+  background-image: url(assets/mjs.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #354052;
+  border-radius: 50px;
+  min-width: 100px;
+  min-height: 100px;
+  margin-bottom: 15px;
+}
+
+.profile-name {
+  font-size: 16px;
+}
+
+.profile-icon {
+  margin-left: 3px;
+}
+
+hr {
+  width: 100%;
+  border: 2px solid #2E394B;
+}
+
+.main, .admin,
+.categories {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+aside h4 {
+  margin-bottom: 20px;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style-type: none;
+}
+
+aside li {
+  padding-bottom: 20px;
+}
+
+aside li i {
+  margin-right: 10px;
+}
+
+aside label {
+  display: block;
+  padding-bottom: 20px;
+}
+
+#admin-chkbox,
+#design-chkbox,
+#executive-chkbox,
+#human-resrcs-chkbox {
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #888;
+}
+
+/*MAIN STYLES*/
+
+main {
+  flex: 1;
+}
+
+/*HEADER STYLES*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  background-color: #ffffff;
+}
+
+nav {
+  display: flex;
+  height: 10vh;
+  border-bottom: 2px solid #F3F3F3;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  border-right: 2px solid #F3F3F3;
+  background-color: #ffffff;
+  color: #999EA9;
+}
+
+button:hover {
+  background-color: #19A3F7;
+}
+
+.fa-caret-left {
+  color: #1C99ED;
+}
+
+.search-bar {
+  display: flex;
+  flex: 2;
+  padding: 20px 0;
+}
+
+.fa-search {
+  margin: 0 10px 0 25px;
+}
+
+.search-input {
+  width: 75%;
+  border: none;
+}
+
+.add-user-btn {
+  border-left: 2px solid #F3F3F3;
+}
+
+article {
+  display: flex;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 40px;
+}
+
+.header-title h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.header-title p {
+  font-size: 14px;
+}
+
+.preview {
+  color: #19A3F7;
+}
+
+.fa-map-marker {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.header-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 40px;
+}
+
+.header-btns button {
+  border: 2px solid #F3F3F3;
+  border-radius: 100px;
+  padding: 15px 18px;
+  margin: 10px;
+}
+
+.fa-circle {
+  color: #88C736;
+  margin-right: 5px;
+}
+
+.second-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  border: none;
+}
+
+.tab-nav {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 24px 0;
+  color: #999EA9;
+  font-weight: 700;
+}
+
+.tab-nav:hover,
+.tab-active {
+  border-bottom: 3px solid #19A3F7;
+  color: #354052;
+}
+
+/*SECTION STYLES*/
+
+.main-content {
+  height: 75%;
+  padding: 40px;
+  background-color: #EDF2F6;
+}
+
+.graphs {
+  display: flex;
+}
+
+.circle-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding-top: 10px;
+}
+
+.three-circles {
+  display: flex;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 180px;
+  border: 10px solid;
+  border-radius: 200px;
+  transform: rotate(-45deg);
+}
+
+.circle-applicants {
+  border-color: #4EB8BF #4EB8BF #D2E1E8 #4EB8BF;
+}
+
+.circle-interviews {
+  margin: 0 30px;
+  border-color: #19A3F7 #D2E1E8 #D2E1E8 #19A3F7;
+}
+
+.circle-forwards {
+  border-color: #D2E1E8 #D2E1E8 #D2E1E8 #A55C9D;
+}
+
+.circle-data {
+  color: #354052;
+  transform:rotate(45deg);
+  text-align: center;
+}
+
+.circle-count {
+  font-size: 40px;
+  font-weight: 400
+}
+
+.circle-category {
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.total-views-btn {
+  margin-top: 30px;
+}
+
+.totals-btn,
+.applicants-btn {
+  padding: 10px 15px;
+  border: 1px solid #D2E1E8;
+  border-radius: 20px;
+  color: #354052;
+  font-size: 14px;
+}
+
+.totals {
+  text-transform: uppercase;
+}
+
+.bar-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.bar-graph-img {
+  min-height: 200px;
+  min-width: 500px;
+  background-image: url(assets/bar-graph.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.applicants-btn {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.divider-line {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(210, 225, 232, 0.3);
+}
+
+.up-arrow-btn {
+  border: 1px solid #D2E1E8;
+  border-radius: 100px;
+  padding: 10px 15px;
+  margin: 0 10px;
+}
+
+.job-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-info-table {
+  width: 70%;
+}
+
+.table-header {
+  background-color: #63728B
+}
+
+th {
+  color: #ffffff;
+}
+
+.table-category {
+  text-transform: uppercase;
+}
+
+.social-content {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: #EDF2F6;
+}
+
+.social-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin-square {
+  margin-right: 20px;
+}
+
+.facebook-btn {
+  background-color: #4064BF;
+  color: #ffffff;
+}
+
+.twitter-btn {
+  background-color: #009DF0;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.linkedin-btn {
+  background-color: #0073B5;
+  color: #ffffff;
+}
+
+.job-link, .btn-widget,
+.upload-resume {
+  display: flex;
+  flex-direction: column;
+}
