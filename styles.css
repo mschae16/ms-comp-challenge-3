@@ -202,7 +202,7 @@ button {
 
 /*****TITLE STYLES*****/
 
-article {
+.header-content article {
   display: flex;
 }
 
@@ -263,7 +263,6 @@ article {
 
 .second-nav {
   display: flex;
-  align-items: center;
   padding-left: 40px;
   border-right: 2px solid #F2F2F2;
 }
@@ -283,6 +282,10 @@ article {
 .tab-active {
   border-bottom: 3px solid #19A3F7;
   color: #354052;
+}
+
+.tab-more {
+  display: none;
 }
 
 /***********SECTION STYLES***********/
@@ -659,5 +662,140 @@ td {
 
 @media screen and (max-width: 1400px) {
 
-  
+  .graphs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-chart {
+    padding: 0;
+  }
+
+  .bar-graph {
+    margin-top: 40px;
+  }
+
+  .bar-graph-img {
+    min-height: 280px;
+    min-width: 640px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+
+  .job-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-info-table {
+    width: 100%;
+  }
+
+  .social-content {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .social-btns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .facebook-btn,
+  .twitter-btn,
+  .linkedin-btn {
+    width: 30%;
+  }
+
+  .twitter-btn {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+
+  .tab-broadcast,
+  .tab-notify {
+    display: none;
+  }
+
+  .tab-more {
+    display: inline-block;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-linkedin-square  {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+  .left-nav,
+  .tab-more {
+    display: none;
+  }
+
+  .tab-broadcast,
+  .tab-notify {
+    display: inline-block;
+  }
+
+  .header-title,
+  .header-btns {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+
+  .tab-more {
+    display: inline-block;
+  }
+
+  .tab-broadcast,
+  .tab-notify {
+    display: none;
+  }
+
+  .second-nav {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .header-content  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+  }
+
+  .header-title {
+    align-items: center;
+    padding: 20px 0 10px 0;
+  }
+
+  .header-btns {
+    padding: 0 0 30px 0;
+  }
+
+  .social-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facebook-btn,
+  .twitter-btn,
+  .linkedin-btn {
+    width: 100%;
+  }
+
+  .twitter-btn {
+    margin: 20px 0;
+  }
 }
