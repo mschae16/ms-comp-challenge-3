@@ -11,6 +11,7 @@ body {
   width: 100%;
   color: #999EA9;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 html, body, ul, h1, h2, h3, h4, p {
@@ -20,19 +21,28 @@ html, body, ul, h1, h2, h3, h4, p {
 
 /*ASIDE STYLES*/
 
-aside {
+.left-nav {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  min-width: 200px;
   background-color: #354052;
+  min-width: 200px;
+  min-height: 100%;
+  color: #8594b0;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  width: 100%;
+  padding: 15px;
+}
+
+.profile:hover {
+  cursor: pointer;
+  color: #19A3F7;
 }
 
 .profile-pic {
@@ -47,15 +57,15 @@ aside {
   margin-bottom: 15px;
 }
 
+.profile:hover .profile-pic {
+  border: 3px solid #19A3F7;
+}
+
 .profile-name {
   font-size: 16px;
 }
 
-.profile-icon {
-  margin-left: 3px;
-}
-
-hr {
+.left-nav hr {
   width: 100%;
   border: 2px solid #2E394B;
 }
@@ -67,26 +77,49 @@ hr {
   padding: 20px;
 }
 
-aside h4 {
+.main ul,
+.admin ul {
+  text-transform: uppercase;
+}
+
+.main .fa,
+.admin .fa {
+  font-size: 16px;
+  padding: 2px;
+}
+
+.admin .fa-map-marker {
+  padding-left: 6px;
+  margin-right: 15px;
+}
+
+.left-nav h4 {
   margin-bottom: 20px;
 }
 
-aside ul {
+.left-nav ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   list-style-type: none;
 }
 
-aside li {
+.left-nav li {
   padding-bottom: 20px;
 }
 
-aside li i {
+.left-nav li i {
   margin-right: 10px;
 }
 
-aside label {
+.left-nav li:hover {
+  color: #19A3F7;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  transform: scale(1.2);
+}
+
+.left-nav label {
   display: block;
   padding-bottom: 20px;
 }
@@ -113,13 +146,12 @@ main {
 header {
   display: flex;
   flex-direction: column;
-  height: 25%;
   background-color: #ffffff;
 }
 
 nav {
   display: flex;
-  height: 10vh;
+  height: 60px;
   border-bottom: 2px solid #F3F3F3;
 }
 
@@ -131,17 +163,22 @@ button {
   color: #999EA9;
 }
 
-button:hover {
+.top-nav button:hover {
   background-color: #19A3F7;
+  color: #fff;
 }
 
-.fa-caret-left {
-  color: #1C99ED;
+.top-nav .fa-caret-left {
+  color: #19A3F7;
+}
+
+.top-nav button:hover .fa-caret-left {
+  color: #fff;
 }
 
 .search-bar {
   display: flex;
-  flex: 2;
+  flex: 1;
   padding: 20px 0;
 }
 
@@ -152,6 +189,8 @@ button:hover {
 .search-input {
   width: 75%;
   border: none;
+  color: #999EA9;
+  outline: none;
 }
 
 .add-user-btn {
@@ -210,7 +249,7 @@ article {
   display: flex;
   align-items: center;
   padding-left: 40px;
-  border: none;
+  border-right: 2px solid #F2F2F2;
 }
 
 .tab-nav {
@@ -219,7 +258,7 @@ article {
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 24px 0;
+  padding: 22px 0;
   color: #999EA9;
   font-weight: 700;
 }
@@ -233,7 +272,6 @@ article {
 /*SECTION STYLES*/
 
 .main-content {
-  height: 75%;
   padding: 40px;
   background-color: #EDF2F6;
 }
@@ -338,18 +376,17 @@ article {
 .divider {
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .divider-line {
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid rgba(210, 225, 232, 0.3);
+  width: 50%;
+  margin: auto 0;
+  border: 1px solid #D2E1E8;
 }
 
 .up-arrow-btn {
-  border: 1px solid #D2E1E8;
+  border: 2px solid #D2E1E8;
   border-radius: 100px;
   padding: 10px 15px;
   margin: 0 10px;
@@ -361,26 +398,83 @@ article {
 }
 
 .job-info-table {
-  width: 70%;
+  width: 66.6666%;
+  border: none;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(51,51,51,.4);
+}
+
+thead {
+  background-color: #63728B;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .table-header {
-  background-color: #63728B
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-th {
-  color: #ffffff;
+.table-header th {
+  display: flex;
+  align-items: center;
+}
+
+.edit-btn {
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #7E8CA7;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+
+.edit-btn .fa-pencil {
+  margin-right: 5px;
+}
+
+tbody {
+  width: 100%;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #D9DEE2;
+}
+
+.row {
+  display: flex;
+  width: 90%;
+  min-height: 30px;
+  margin: 0 auto;
+  padding: 28px 0;
+  color: #6F7E95;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .table-category {
+  width: 30%;
+  font-weight: 700;
+  text-align: left;
   text-transform: uppercase;
+}
+
+td {
+  width: 70%;
 }
 
 .social-content {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 33.3333%;
   background-color: #EDF2F6;
+  padding-left: 45px;
 }
 
 .social-btns {
@@ -388,10 +482,21 @@ th {
   flex-direction: column;
 }
 
+.facebook-btn,
+.twitter-btn,
+.linkedin-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
 .fa-facebook,
 .fa-twitter,
 .fa-linkedin-square {
-  margin-right: 20px;
+  margin-right: 50px;
+  font-size: 25px;
 }
 
 .facebook-btn {
@@ -414,4 +519,78 @@ th {
 .upload-resume {
   display: flex;
   flex-direction: column;
+  padding: 30px 0;
+}
+
+.job-link-title,
+.btn-widget-title,
+.upload-resume-title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.btn-widget {
+  border-top: 1px solid #D2E1E8;
+  border-bottom: 1px solid #D2E1E8;
+}
+
+.input-btn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  box-shadow: 0 2px 2px rgba(55,55,55,.2);
+}
+
+.input-area {
+  display: flex;
+  flex: 2;
+  padding: 10px;
+  text-overflow: ellipsis;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #fff;
+  color: #6F7E95;
+  border-style: none;
+}
+
+.copy-btn {
+  background-color: #4EB8BF;
+  color: #fff;
+}
+
+.fa-globe,
+.fa-cog,
+.fa-paper-plane {
+  padding-top: 2px;
+  margin-right: 5px;
+  color: #6F7E95;
+  font-size: 20px;
+}
+
+.social-content h2 {
+  color: #6F7E95;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.social-content p {
+  color: #6F7E95;
+  font-weight: 400;
+  line-height: 1.5;
+  /*text-transform: lowercase;*/
+}
+
+.email-link {
+  display: flex;
+  background-color: #fff;
+  color: #6F7E95;
+  margin-top: 15px;
+  padding: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 2px rgba(55,55,55,.2);
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: lowercase;
 }

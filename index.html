@@ -10,7 +10,7 @@
     <title>Static Comp 3</title>
   </head>
   <body>
-    <aside>
+    <aside class="left-nav">
       <div class="profile">
         <button class="profile-pic"></button>
         <h3 class="profile-name">Margo Schaedel <span class="profile-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span></h3>
@@ -43,19 +43,19 @@
         <div class="checkboxes">
           <label class="checkbox">
             <input type="checkbox" id="admin-chkbox" checked>
-            administrative
+            Administrative
           </label>
           <label class="checkbox">
             <input type="checkbox" id="design-chkbox">
-            design
+            Design
           </label>
           <label class="checkbox">
             <input type="checkbox" id="executive-chkbox">
-            executive
+            Executive
           </label>
           <label class="checkbox">
             <input type="checkbox" id="human-resrcs-chkbox">
-            human resources
+            Human Resources
           </label>
         </div>
       </div>
@@ -154,43 +154,48 @@
         </div>
         <section class="job-info">
           <table class="job-info-table">
-            <tr class="row table-header">
-              <th class="table-category">Job Description</th>
-              <th><button><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button></th>
-            </tr>
-            <tr class="row row-one">
-              <td class="table-category">Position Title</td>
-              <td>Customer Service Representative</td>
-            </tr>
-            <tr class="row row-two">
-              <td class="table-category">Location</td>
-              <td>San Francisco, CA</td>
-            </tr>
-            <tr class="row row-three">
-              <td class="table-category">Employment Type</td>
-              <td>Full-time</td>
-            </tr>
-            <tr class="row row-four">
-              <td class="table-category">Experience</td>
-              <td>Mid-level</td>
-            </tr>
-            <tr class="row row-five">
-              <td>Status</td>
-              <td>Open</td>
-            </tr>
-            <tr class="row row-six">
-              <td>Description</td>
-              <td>The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle, helping the business reduce customer service wait times while doing a back handspring and eating a ham sandwich.</td>
-            </tr>
-            <tr class="row row-seven">
-              <td>Hiring Lead</td>
-              <td><img src="" alt="">Tina Fey</td>
-            </tr>
-            <tr class="row row-eight">
-              <td>Approved Salary</td>
-              <td>$1,000,000</td>
-            </tr>
+            <thead>
+              <tr class="table-header">
+                <th colspan="2" class="table-category">Job Description</th>
+                <td><button class="edit-btn"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row row-one">
+                <th colspan="2" class="table-category">Position Title</th>
+                <td>Customer Service Representative</td>
+              </tr>
+              <tr class="row row-two">
+                <th colspan="2" class="table-category">Location</th>
+                <td>San Francisco, CA</td>
+              </tr>
+              <tr class="row row-three">
+                <th colspan="2" class="table-category">Employment Type</th>
+                <td>Full-time</td>
+              </tr>
+              <tr class="row row-four">
+                <th colspan="2" class="table-category">Experience</th>
+                <td>Mid-level</td>
+              </tr>
+              <tr class="row row-five">
+                <th colspan="2" class="table-category">Status</th>
+                <td>Open</td>
+              </tr>
+              <tr class="row row-six">
+                <th colspan="2" class="table-category">Description</th>
+                <td>The Customer Service Representative is responsible for interacting with and providing quality assistance to all radical customers, responsible for keeping up-to-date on the various product shizzle, helping the business reduce customer service wait times while doing a back handspring and eating a ham sandwich.</td>
+              </tr>
+              <tr class="row row-seven">
+                <th colspan="2" class="table-category">Hiring Lead</th>
+                <td><img src="" alt="">Tina Fey</td>
+              </tr>
+              <tr class="row row-eight">
+                <th colspan="2" class="table-category">Approved Salary</th>
+                <td>$1,000,000</td>
+              </tr>
+            </tbody>
           </table>
+
           <aside class="social-content">
             <div class="social-btns">
               <button type="button" class="facebook-btn"><i class="fa fa-facebook" aria-hidden="true"></i>Post to Facebook</button>
@@ -198,34 +203,34 @@
               <button type="button" class="linkedin-btn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>Post to Linkedin</button>
             </div>
             <div class="job-link">
-              <div>
+              <div class="job-link-title">
                 <i class="fa fa-globe" aria-hidden="true"></i>
                 <h2>Link to this Job</h2>
               </div>
               <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
-              <div>
-                <input type="text" value="http://thisjobhasawebsitehere.com" />
+              <div class="input-btn">
+                <input class="input-area" type="text" value="http://thisjobhasawebsitehere.com" />
                 <button type="button" class="copy-btn">Copy</button>
               </div>
             </div>
             <div class="btn-widget">
-              <div>
+              <div class="btn-widget-title">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 <h2>Use the Button Widget</h2>
               </div>
               <p>This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
-              <div>
-                <input type="text" value="<script type='text/javascript' src='script.js'></script>" />
+              <div class="input-btn">
+                <input class="input-area" type="text" value="<script type='text/javascript' src='script.js'></script>" />
                 <button type="button" class="copy-btn">Copy</button>
               </div>
             </div>
             <div class="upload-resume">
-              <div>
+              <div class="upload-resume-title">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
                 <h2>Upload Resumes by Email</h2>
               </div>
               <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
-              <a href="#">tinafey@gmail.com</a>
+              <a class="email-link" href="#">tinafey@gmail.com</a>
             </div>
           </aside>
         </section>
