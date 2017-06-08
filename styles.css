@@ -124,16 +124,60 @@ html, body, ul, h1, h2, h3, h4, p {
   padding-bottom: 20px;
 }
 
-#admin-chkbox,
-#design-chkbox,
-#executive-chkbox,
-#human-resrcs-chkbox {
+.chkbx {
+  font-size: 15px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 8px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
   margin-right: 10px;
 }
 
-input[type="checkbox"]:checked + label:before {
-  background-color: #888;
+.admin-chkbox {
+  background-color: #f4f142;
+  border: 1px solid #f4f142;
 }
+
+.design-chkbox {
+  background-color: #19A3F7;
+  border: 1px solid #19A3F7;
+}
+
+.executive-chkbox {
+  background-color: #EA1C62;
+  border: 1px solid #EA1C62;
+}
+
+.human-resrcs-chkbox {
+  background-color: #4EB8BF;
+  border: 1px solid #4EB8BF;
+}
+
+.checkbox:active,
+.checkbox:checked:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.checkbox:checked {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #354052;
+}
+
+.checkbox:checked:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #354052;
+}
+
+
 
 /***********MAIN STYLES***********/
 
