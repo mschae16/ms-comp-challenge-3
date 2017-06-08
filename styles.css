@@ -554,6 +554,19 @@ tbody tr:not(:last-child) {
   width: 70%;
 }
 
+.data-img {
+  display: flex;
+  align-items: center;
+}
+
+.tina-fey {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #6F7E95;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
 /*****SOCIAL CONTENT ASIDE STYLES*****/
 
 .social-content {
